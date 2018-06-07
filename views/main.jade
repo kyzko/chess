@@ -1,0 +1,125 @@
+extends layout
+
+block content
+    html
+        body
+        .navbar.navbar-inverse.navbar-fixed-top.navbar.repeat
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='main') Организация шахматных турниров
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                        // <li class="active"><a href="#">Домой</a> </li>
+                        li
+                            a(href='register') Регистрация
+                        li
+                            a(href='index') Вход
+
+             //.container.wb
+             //    .box
+             //        div content1
+             //            div content 2
+             //                div content3
+
+        .container.wb
+
+        script.
+            $(function () {
+                $('.thrumb').mouseenter(function () {
+                    $('img', this).stop().animate({marginTop: '80%', opacity: 0}, 600);
+                }).mouseleave(function (e) {
+                    $('img', this).stop().animate({marginTop: '0%', opacity: 1}, 600);
+                });
+            });
+
+        br
+        br
+
+        .container.wb
+            .centered
+                .thrumb-wrapp
+                    .thrumb
+                        .wrapp
+                            h2 Нажмите здесь, чтобы посмотреть всю информацию о состоявишихся турнирах
+                            //p Описание
+                            //a(href='past') Информация о прошедших турнирах
+
+                        .wrapper
+                            img#img(src='images/Прошедшие.png', width='250')
+                    .thrumb
+                        .wrapp
+                            h2 Нажмите здесь, чтобы посмотреть всю информацию о текущих турнирах
+                            //p Описание
+                           // a(href='past') Посмотреть информацию о текущих турнирах
+                        .wrapper
+                            img(src='images/текущие.png', width='250')
+                    .thrumb
+                         .wrapp
+                             h2 Нажмите здесь, чтобы посмотреть всю информацию о предстоящих турнирах
+                             //p Описание
+                             //a(src='images/будущие.png', width='250') http://yandex.ru
+                         .wrapper
+                             img#img(src='images/будущие.png', width='250')
+
+
+
+
+                //.nav
+                //    p
+                //        img(src='./vaden-pro-logo.png', alt='')
+                //    p.string
+                //        a(href='#') Ссылка меню 1 длиннее обычного
+                //.nav
+                //    p
+                //        img(src='./vaden-pro-logo.png', alt='')
+                //    p.string
+                //        a(href='#') Ссылка меню 2
+                //.nav
+                //    p
+                //        img(src='./vaden-pro-logo.png', alt='')
+                //    p.string
+                //        a(href='#') Ссылка меню 3
+                //.nav
+                //    p
+                //        img(src='./vaden-pro-logo.png', alt='')
+                //    p.string
+                //        a(href='#') Ссылка меню 4
+
+
+
+
+        //        br
+        //        br
+        //        .col-lg-8.col-lg-offset-2
+        //            h4 Последние турниры
+        //            p еще не знаю как, но развернем jquery
+        //        .col-lg-2
+        //        .col-lg-10.col-lg-offset-1
+        //            img.img-responsive(src="")
+        //
+        //    #lg
+        //        .container
+        //            .row
+        //                h4 Предстоящие турниры
+        //                .col-lg-2.col-lg-offset-1
+        //                    .container.w
+        //                        .row.centered
+        //
+        //#r
+        //    .container
+        //        .row.centered
+        //            .col-lg-8.col-lg-offset-2
+        //                h4 Текущие
+
+
+
+        #footer
+            .container
+                .row.centered
+                  p любая контактная ифнормация
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+        script(src='../js/bootstrap.min.js')

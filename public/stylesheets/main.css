@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
+
+body {
+    /*background-color: #fdfef9;*/
+    /*background-image: url("http://ru.sport-wiki.org/wp-content/themes/sportwiki/img/shahmaty.jpg") no-repeat;*/
+    font-family: "Lato";
+    font-weight: 300;
+    font-size:16px;
+    color: #555;
+    overflow: auto;
+    /*background-image: url("http://ru.sport-wiki.org/wp-content/themes/sportwiki/img/shahmaty.jpg");*/
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+
+    margin-top: 70px;
+}
+
+h1, h1, h3, h4, h5, h6 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #a2b1c8;
+}
+
+p{
+    line-height: 28px;
+    margin-bottom: 25px;
+    color: #464847;
+}
+.centered {
+    text-align: center;
+}
+
+a {
+    color: #464847;
+}
+
+a:hover, a:focus {
+    color: #989590;
+    text-decoration: none;
+    outline: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #faf0ef;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.navbar {
+    font-weight: 800;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar.repeat {
+    font-weight: 800;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    background-size: contain;
+    /*background-image: url("https://pp.userapi.com/c624827/v624827697/d8dc/AkyTx3Euncc.jpg") ;*/
+}
+
+.navbar-inverse {
+    background: #060201;
+    /*border-color: #2aabd2;*/
+    /*background-image: url("http://docplayer.ru/docs-images/67/56995858/images/22-0.jpg");*/
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+    background-color: #dfafbf;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #a2b1c8;
+}
+
+.navbar-inverse .navbar-brand{
+    color: #a2b1c8;
+    font-weight: bolder;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+.navbar-header. {
+    background-image: url("http://docplayer.ru/docs-images/67/56995858/images/22-0.jpg");
+}
+
+#headerwrap {
+    /*background: url(../img/books.png) no-repeat  center top;*/
+    margin-top: -10px;
+    padding-top: 20px;
+    text-align: center;
+    background-attachment: local;
+    background-position: center center;
+    min-height: 500px;
+    width: 100%;
+    color: #ebe4e2;
+
+
+    background-size: 100% ;
+
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+
+
+}
+#headerwrap h1{
+    margin-top: 100px;
+    color: #f90404;
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+#headerwrap h2 {
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.w {
+    padding-top:  35px;
+}
+
+.w h4 {
+    font-size: 25px;
+}
+
+#dg {
+    /*background-image: url("http://ru.sport-wiki.org/wp-content/themes/sportwiki/img/shahmaty.jpg") width="100%";*/
+    width: 100%;
+    padding-top: inherit;
+    padding-bottom: 222px;
+    text-align:center;
+}
+#dg h4 {
+    font-size: 40px;
+}
+#dg {
+    padding-top: 35px;
+}
+/*Вращение картинок смешное*/
+/*.tilt {*/
+/*-webkit-transition: all 0.5s ease;*/
+/*-o-transition: all 0.5s ease;*/
+/*-moz-transition: all 0.5s ease;*/
+/*!*-ms-transition: all 0.5s ease;*!*/
+/*transition: all 0.5s ease;*/
+/*}*/
+.tilt:hover {
+    -webkit-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    /*-ms-transition: rotate(-10deg);*/
+    transform: rotate(-10deg);
+}
+.wb {
+    padding-top: 35px;
+    margin-bottom: 0;
+}
+.wb h4 {
+    font-size: 35px;
+}
+#lg {
+    background: #a2b1c8;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+#lg h4 {
+    font-size: 45px;
+    color: #fdfef9;
+}
+#r {
+    background: #989590;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+#r h4 {
+    color: white;
+    font-size: 45px;
+}
+#r p {
+    color: white;
+}
+
+#footer {
+    background: #060201;
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    left: 0; bottom: 0;
+}
+#footer i {
+    color: #a2b1c8;
+    font-size: 30px;
+    padding: 10px 40px 10px 40px;
+}
+
+#footer i:hover {
+    color: #989590;
+}
+.btn-primary.active  {
+    color: #5e556a;
+    background-color: #cfe4dd;
+    border-color: #5e556a;
+}
+.btn-primary {
+    color: #464847;
+    background-color: #a2b1c8;
+    border-color: #464847;
+}
+.btn-primary.active:hover {
+    color: #fecbcf;
+    background-color: #5e556a;
+}
+.btn-block {
+    display: block;
+    /*width: -webkit-inline-box;*/
+    position: absolute;
+}
+input:-webkit-autofill {
+    background-color: #ebe4e2 !important;
+    /*background-image: none !important;*/
+    color: rgb(0, 0, 0) !important;
+}
+.form-control:focus {
+    border-color: #5e556a;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+/*.tablica {*/
+    /*display: table;*/
+    /*width: 100%;*/
+    /*border-spacing: 10px 10px;*/
+/*}*/
+
+/*.yacheika {*/
+    /*display: table-cell;*/
+    /*padding: 10px;*/
+/*}*/
+.wrap {
+    width: 1310px;/*фиксируем ширину обертки*/
+    margin: 0 auto;/*центрируем ее*/
+    /*background: darkgray;*/
+    height: 120px;/*Задаем высоту обертки*/
+}
+
+.bblock {
+    float: left; /*Задаем обтекание*/
+    line-height: 55px;/*Высота строки +  верт. центрирования текста*/
+    font-size: 40px;
+    background: dodgerblue;
+    color: white;
+    width: 320px; /*Фиксируем ширину блока*/
+    margin-right: 10px;
+    text-align: center; /*Центрируем текст по горизонтали*/
+}
+.wrap :last-child {
+    margin-right: 0px;/*Убираем поле последнего div-а*/
+}
+.string {
+    text-align: center; /*Равняем текст по-горизонтали*/
+}
+/*li {*/
+    /*display: inline-block;*/
+    /*width: 180px;*/
+    /*!*background: darkgrey;*!*/
+    /*color: #a2b1c8;*/
+    /*line-height: 120px;*/
+    /*font-size: 32px;*/
+    /*text-align: center;*/
+/*}*/
+/*.bblock {*/
+    /*display: table-cell;*/
+    /*font-size: 32px;*/
+    /*width: 220px;*/
+    /*height: 220px;*/
+    /*background: #a2b1c8;*/
+    /*text-align: center;*/
+    /*vertical-align: middle;*/
+    /*margin: 50px;*/
+/*}*/
+
+/*.wrap {*/
+    /*display: table;*/
+    /*border-spacing: 20px 20px;*/
+    /*!*background-color: darkgray;*!*/
+/*}*/
+/*body {*/
+    /*background: url(http://subtlepatterns.com/patterns/grey_wash_wall.png);*/
+/*}*/
+.thrumb .wrapp {
+    left: 0;
+    margin: 20px;
+    position: absolute;
+    top: 0;
+    height: 158px;
+}
+.thrumb-wrapp {
+    display: inline-block;
+    margin-top: 20px;
+}
+.thrumb {
+    background: url(http://subtlepatterns.com/patterns/squared_metal.png);
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid #5e556a;
+}
+.thrumb .wrapper {
+    height: 200px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+}
+.thrumb .wrapper img {
+    height: 200px;
+    width: 300px;
+    position: relative;
+    z-index: 2;
+}
+.wrapp h2 {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: #464847;
+}
+.wrapp > p {
+    font-size: 13px;
+    line-height: 12px;
+    margin: 10px 0;
+}
+.wrapp a {
+    font-family: Trebuchet MS, Arial;
+    position: in;
+    z-index: 1;
+    color: #5e556a;
+    bottom: 0;
+    font-size: 13px;
+}
+.wrapp a:hover {
+    color: #464847;
+}
+.display {
+    width: 100%;
+    cellspacing: 0;
+}
+.menu_list {
+    width: 150px;
+}
+.menu_head {
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    margin:1px;
+    font-weight:bold;
+    background: #eef4d3 url(left.png) center right no-repeat;
+}
+.menu_body {
+    display:none;
+}
+.menu_body a{
+    display:block;
+    color:#006699;
+    background-color:#EFEFEF;
+    padding-left:10px;
+    font-weight:bold;
+    text-decoration:none;
+}
+.menu_body a:hover{
+    color: #000000;
+    text-decoration:underline;
+}
+.sub-menu
+{
+    display: none;
+}
+.main-item:focus ~ .sub-menu,
+.main-item:active ~ .sub-menu,
+.sub-menu:hover
+{
+    display: block;
+}
+.bloki .block {
+    background: #e7e7e7;
+    padding: 2px 1%;
+    margin-bottom: 5px;
+    min-height: 30px;}
+.bloki .block > div, .bloki .block h3, .bloki .block a {
+    float: left;
+    min-width: 18%;
+    margin: 0px;
+    font-weight: normal;
+    font-size: 1em;
+    padding: 5px;
+    margin-left: 0.5%;
+    text-align: center;}
+.bloki .block a.kplus {min-width:10%;}
+.bloki .block a.kplus span {
+    background: #fa5205;
+    border-radius: 10px;
+    width: 25px;
+    height: 25px;
+    display: block;
+    font-size: 20px;
+    line-height: 25px;
+    cursor:pointer;
+    color: #fff;}
+.bloki .block p {clear:both;
+    margin: 0px;
+    padding: 10px;
+    background:#fff;}
+.bloki .block a.viz span {
+    background: #b1250c;
+}
+.gang-name{
+    font-size:25px;
+    font-family:cursive;
+    background-color:lightgray;
+    cursor:pointer;
+}
+.members {
+    font-family:helvetica;
+}
+.blips {
+    color:red;
+}
+.crudz {
+    color:blue;
+}
+.satin-flings {
+    color:rgb(213, 194, 0);
+}
+td {
+    padding-right:10px;
+    padding-left:10px;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 5px;
+    background: #ebe4e2;
+    border-radius: 20px;
+}
+th {
+    font-size: 22px;
+    font-weight: 300;
+    padding: 12px 10px;
+    border-bottom: 2px solid #989590;
+    color: #989590;
+}
+tbody tr:nth-child(2) {
+    border-bottom: 2px solid #989590;
+}
+td {
+    padding: -1 px;
+    color: #8D8173;
+}
+
+    .col-sm-12 {
+        width:  min-content;
+    }
+.col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: initial;
+    min-height: unset;
+    padding-right: 15px;
+    padding-left: 134px;
+html {
+    display: block;
+}

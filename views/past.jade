@@ -1,0 +1,76 @@
+extends layout
+
+block content
+    html
+        body
+        .navbar.navbar-inverse.navbar-fixed-top.navbar.repeat
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='#') Организация шахматных турниров
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                        // <li class="active"><a href="#">Домой</a> </li>
+                        li
+                            a(href='/views/register.jade') Регистрация
+                        li
+                            a(href='/views/index.jade') Вход
+    .container.wb
+        .centered
+        h4 Информация о прошдших турнирах
+        table#itdev_gangs
+            tr.gang-name
+                td(colspan='2') БГТУ им. В. Г. Шухова
+            tr.members.blips
+                td Иванов И. И.
+                td 1
+            tr.members.blips
+                td Петров П. П.
+                td 2
+            tr.members.blips
+                td Петров П. П.
+                td 2
+    .container.wb
+        .centered
+            table#itdev_gangs
+                tr.gang-name
+                    td(colspan='2') НИУ БелГУ
+                tr.members.blips
+                    td Иванов И. И.
+                    td 1
+                tr.members.blips
+                    td Петров П. П.
+                    td 2
+                tr.members.blips
+                    td Петров П. П.
+                    td 2
+
+    script.
+        $('.gang-name').click(function () {
+            if ($(this).hasClass("collapsed")) {
+                $(this).nextUntil('tr.gang-name')
+                    .find('td')
+                    .parent()
+                    .find('td > div')
+                    .slideDown("fast", function () {
+                        var $set = $(this);
+                        $set.replaceWith($set.contents());
+                    });
+                $(this).removeClass("collapsed");
+            } else {
+                $(this).nextUntil('tr.gang-name')
+                    .find('td')
+                    .wrapInner('<div style="display: block;" />')
+                    .parent()
+                    .find('td > div')
+                    .slideUp("fast");
+                $(this).addClass("collapsed");
+            }
+        });
+
+
+
+

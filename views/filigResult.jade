@@ -1,0 +1,72 @@
+extends layout
+
+block content
+    html
+        body
+        .navbar.navbar-inverse.navbar-fixed-top.navbar.repeat
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='main') Организация шахматных турниров
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                        // <li class="active"><a href="#">Домой</a> </li>
+                        li
+                            a(href='register') Регистрация
+                        li
+                            a(href='index') Вход
+        br
+        br
+        .div
+            .col-xs-12.col-sm-12
+                h4 Внесение результатов
+                form(name='name' action='/registerBook' method='POST')
+                    table
+                        tr
+                           th Стол
+                           th Белые
+                           th Рейтинг
+                           th Результат
+                           th Черные
+                           th Рейтинг
+
+                        tr
+                           td 1
+                           td Иванов И. И.
+                           td 1000
+                           td
+                            select
+                                option 1-0
+                                option 1/2
+                                option 0-1
+                           td Петров П. П.
+                           td 1001
+
+                        tr
+                           td 1
+                           td Иванов И. И.
+                           td 1000
+                           td
+                            select
+                                option 1-0
+                                option 1/2
+                                option 0-1
+                           td Петров П. П.
+                           td 1001
+                        tr
+                           td 1
+                           td Иванов И. И.
+                           td 1000
+                           td
+                            select
+                                option 1-0
+                                option 1/2
+                                option 0-1
+                           td Петров П. П.
+                           td 1001
+
+                br
+                button(class='btn btn-lg btn-primary btn-block', type='submit') Добавить

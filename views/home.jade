@@ -1,0 +1,147 @@
+extends layout
+
+block content
+    html
+        body
+        .navbar.navbar-inverse.navbar-fixed-top.navbar.repeat
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='main') Организация шахматных турниров
+                .navbar-collapse.collapse
+                    ul.nav.navbar-nav.navbar-right
+                        // <li class="active"><a href="#">Домой</a> </li>
+                        li
+                            a(href='register') Регистрация
+                        li
+                            a(href='index') Вход
+
+        br
+        br
+
+        div.container
+        div.row
+            .col-xs-12.col-sm-4
+                #user
+                    h1.login-title Мы рады Вашему возвращению, #{user.firstName}.
+                        h3 Информация о ползователе
+                        a(href='#')
+                            img(alt='изображение пользователя')
+                        ul.user-details
+                            li Имя пользователя: #{user.username}
+                            li Email: #{user.email}
+                            li Имя: #{user.firstName}
+                            li Фамилия: #{user.lastName}
+
+
+    .div
+     .col-xs-12.col-sm-12
+        h4 Список активных турниров
+        table
+            tr
+                th Наименование книги
+                th Автор
+                th Статус
+            tr
+                td Peter
+                td Griffin
+                td $100
+
+            tr
+                td Lois
+                td Griffin
+                td $150
+            tr
+                td Joe
+                td Swanson
+                td $300
+            tr
+                td Cleveland
+                td Brown
+                td $250
+            tr
+                td Lois
+                td Griffin
+                td $150
+            tr
+                td Joe
+                td Swanson
+                td $300
+            tr
+                td Cleveland
+                td Brown
+                td $250
+            tr
+                td Lois
+                td Griffin
+                td $150
+            tr
+                td Joe
+                td Swanson
+                td $300
+            tr
+                td Cleveland
+                td Brown
+                td $250
+     .col-xs-12.col-sm-12
+        h4 Список зарегестрировавшихся турниров
+
+        table
+            tr
+                th Наименование книги
+                th Автор
+                th Статус
+            tr
+                td Peter
+                td Griffin
+                td $100
+                td
+
+            tr
+                td Lois
+                td Griffin
+                td $150
+            tr
+                td Joe
+                td Swanson
+                td $300
+            tr
+                td Cleveland
+                td Brown
+                td $250
+    .col-xs-12.col-sm-12
+        h4 Список активных турниров
+
+        table
+            tr
+                th Наименование книги
+                th Автор
+                th Статус
+            tr
+                td Peter
+                td Griffin
+                td $100
+                td
+
+            tr
+                td Lois
+                td Griffin
+                td $150
+            tr
+                td Joe
+                td Swanson
+                td $300
+            tr
+                td Cleveland
+                td Brown
+                td $250
+
+    #footer
+        .container
+            .row.centered
+                p любая контактная ифнормация
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(src='../js/bootstrap.min.js')
