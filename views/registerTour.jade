@@ -2,58 +2,45 @@ extends layout
 
 block content
     html
-        body
-        .navbar.navbar-inverse.navbar-fixed-top.navbar.repeat
-            .container
-                .navbar-header
-                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
-                    a.navbar-brand(href='#') Организация шахматных турниров
-                .navbar-collapse.collapse
-                    ul.nav.navbar-nav.navbar-right
-                        // <li class="active"><a href="#">Домой</a> </li>
-                        li
-                            a(href='register') Регистрация
-                        li
-                            a(href='index') Вход
-        br
-        br
-        div.container.centered
-            h3 Регистрация турнира
+
+        .container
+            .row.centered
+              h2 Регистрация турнира
             div.row
                 div.col-sm-6.col-md-4.col-md-offset-4
                     form(name='name' action='/registerTour' method='POST')
-                        p Введите название турнира
-                        input(type="text", name='name' size="40")
+                        h4 Введите название турнира
+                        input(type="text", name='title' size="40")
                         br
                         br
-                        p Выберите систему проведения
-                        select
-                            option Швейцасркая
-                            option Круговая
-                            option Нокаут
+                        h4 Выберите систему проведения
+                        select(name='system')
+                            option(value='swiss') Швейцасркая
+                            option(value='circular') Круговая
+                            option(value='olympic') Нокаут
                         br
                         br
-                        form
-                            p Выберите дату проведения:
-                                br
-                                br
-                                input(type='date', name='calendar')
-                                //input(type='submit', value='Отправить')
-                        p Введите место проведения
+                        h4 Выберите дату проведения:
+                        input(type='date', name='start')
+                        h4 Выберите дату окончания:
+                        input(type='date', name='end')
+                        //input(type='submit', value='Отправить')
+                        br
+                        h4 Введите количество туров
+                        input(type='text', name='numberOfTours')
+                        h4 Введите место проведения
                         input(type="text", name="place", size="40")
+                        h4 Выберите контроль времени
+                            select(name='controlTime')
+                                option(value='classic') Классические шахматы
+                                option(value='rapid') Быстрые шахматы
+                                option(value='blitz') Блиц
                         br
-                        br
-                        p Выберите контроль времени
-                            select
-                                option Классические шахматы
-                                option Быстрые шахматы
-                                option Блиц
-                        br
-                        button(class='btn btn-lg btn-primary btn-block', type='submit') Зарегестрировать
-        #footer
-            .container
-                .row.centered
-                    p любая контактная ифнормация
+                        button
+                            i.icon-ok Ок
+    #footer
+        .container
+            .row.centered
+                p ул. Некрасова, 5Б, Белгород, Белгородская обл., 308007
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(src='../js/bootstrap.min.js')

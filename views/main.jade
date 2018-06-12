@@ -15,16 +15,15 @@ block content
                     ul.nav.navbar-nav.navbar-right
                         // <li class="active"><a href="#">Домой</a> </li>
                         li
-                            a(href='register') Регистрация
+                            a(href='home') Личный кабинет
                         li
-                            a(href='index') Вход
+                            a(href='index') Выход
 
-             //.container.wb
-             //    .box
-             //        div content1
-             //            div content 2
-             //                div content3
-
+            //.container.wb
+            //    .box
+            //        div content1
+            //            div content 2
+            //                div content3
         .container.wb
 
         script.
@@ -37,38 +36,54 @@ block content
             });
 
         br
-        br
 
-        .container.wb
-            .centered
-                .thrumb-wrapp
-                    .thrumb
-                        .wrapp
-                            h2 Нажмите здесь, чтобы посмотреть всю информацию о состоявишихся турнирах
-                            //p Описание
-                            //a(href='past') Информация о прошедших турнирах
+        div.container
+             .centered
+                 h4 Правила организации
+                     h6 Настоящие Правила являются концепцией в соответствии с которой, с учетом мнений игроков портала battle-chess в дальнейшем будут выработаны более подробные Правила.Право на организацию и проведение очных турниров имеет:
+                         ul
+                             li 1. «Организатор». Организатором может быть:Администрация портала, далее «Администратор»Любой победитель любого очного турнира по Боевым шахматам, организованным порталом battle-chess, далее «Мастер».
 
-                        .wrapper
-                            img#img(src='images/Прошедшие.png', width='250')
-                    .thrumb
-                        .wrapp
-                            h2 Нажмите здесь, чтобы посмотреть всю информацию о текущих турнирах
-                            //p Описание
-                           // a(href='past') Посмотреть информацию о текущих турнирах
-                        .wrapper
-                            img(src='images/текущие.png', width='250')
-                    .thrumb
-                         .wrapp
-                             h2 Нажмите здесь, чтобы посмотреть всю информацию о предстоящих турнирах
-                             //p Описание
-                             //a(src='images/будущие.png', width='250') http://yandex.ru
-                         .wrapper
-                             img#img(src='images/будущие.png', width='250')
+                     .thrumb-wrapp
+                         .thrumb
+                             .wrapp
+                                 h2.wb В данном разделе содержится информация о состоявшихся турнирах( участник, место, рейтинг, место проведения и т.д.)
+                                     //p Для более подробной информации нажмите здесь
+                                     br
+                                     br
+                                     a.wb(href='past')
+                                         button
+                                             i.fa.fa-search Посмотреть
+                             .wrapper
+                                 img(src='images/Прошедшие.png', width='250')
+                         .thrumb
+                             .wrapp
+                                 h2.wb В данном разделе содержится информация о состоявшихся турнирах( участник, место, рейтинг, место проведения и т.д.)
+                                     //p Для более подробной информации нажмите здесь
+                                     br
+                                     br
+                                     a.wb(href='past')
+                                             button
+                                                 i.fa.fa-search Посмотреть
+                             .wrapper
+                                 img(src='images/текущие.png', width='250')
+                         .thrumb
+                             .wrapp
+                                 h2.wb В данном разделе содержится информация о состоявшихся турнирах( участник, место, рейтинг, место проведения и т.д.)
+                                     //p Для более подробной информации нажмите здесь
+                                     br
+                                     br
+                                     a.wb(href='past')
+                                             button
+                                                 i.fa.fa-search Посмотреть
+                             .wrapper
+                                 img#img(src='images/будущие.png', width='250')
 
 
 
 
-                //.nav
+
+        //.nav
                 //    p
                 //        img(src='./vaden-pro-logo.png', alt='')
                 //    p.string
@@ -88,10 +103,6 @@ block content
                 //        img(src='./vaden-pro-logo.png', alt='')
                 //    p.string
                 //        a(href='#') Ссылка меню 4
-
-
-
-
         //        br
         //        br
         //        .col-lg-8.col-lg-offset-2
@@ -116,10 +127,9 @@ block content
         //                h4 Текущие
 
 
-
         #footer
             .container
                 .row.centered
-                  p любая контактная ифнормация
+                    p ул. Некрасова, 5Б, Белгород, Белгородская обл., 308007
         script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
         script(src='../js/bootstrap.min.js')

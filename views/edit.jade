@@ -1,0 +1,86 @@
+extends layout
+
+block content
+    html
+
+        div.container
+            div.row
+                .col-xs-12.col-sm-4
+                    #user
+                            h3 Информация о турнире
+                            //a(href='#')
+                            //    img(alt='изображение пользователя')
+                            ul.user-details
+                                li Название турнира: #{tournament.title}
+                                li Дата начала: #{tournament.start}
+                                li Дата окончания: #{tournament.end}
+                                - if (tournament.status == 'registration') status = 'Зарегистрирован'
+                                - if (tournament.status == 'start') status = 'Начат'
+                                - if (tournament.status == 'finished') status = 'Окончен'
+                                li Статус: #{status}
+                                - if (tournament.system == 'swiss') system = 'Швейцарская'
+                                - if (tournament.system == 'circular') system = 'Круговая'
+                                - if (tournament.system == 'olympic') system = 'Олимпийская'
+                                li Система проведения: #{system} система
+                                li Количество туров: #{tournament.numberOfTours}
+                                div.row
+                                    div.col-sm-6.col-md-4.col-md-offset-4
+                                        form.form-signin(class='form-signin', action='/allTournaments', method='GET')
+                                            button(class='btn btn-lg btn-primary btn-block', type='submit') К списку всех турниров
+
+    .container.wb
+        .centered
+        h4 Информация о прошедших турнирах
+        table#itdev_gangs
+            tr.gang-name
+                td(colspan='2') БГТУ им. В. Г. Шухова
+            tr.members.blips
+                td Иванов И. И.
+                td 1
+            tr.members.blips
+                td Петров П. П.
+                td 2
+            tr.members.blips
+                td Петров П. П.
+                td 2
+    .container.wb
+        .centered
+            table#itdev_gangs
+                tr.gang-name
+                    td(colspan='2') НИУ БелГУ
+                tr.members.blips
+                    td Иванов И. И.
+                    td 1
+                tr.members.blips
+                    td Петров П. П.
+                    td 2
+                tr.members.blips
+                    td Петров П. П.
+                    td 2
+
+    script.
+        $('.gang-name').click(function () {
+            if ($(this).hasClass("collapsed")) {
+                $(this).nextUntil('tr.gang-name')
+                    .find('td')
+                    .parent()
+                    .find('td > div')
+                    .slideDown("fast", function () {
+                        var $set = $(this);
+                        $set.replaceWith($set.contents());
+                    });
+                $(this).removeClass("collapsed");
+            } else {
+                $(this).nextUntil('tr.gang-name')
+                    .find('td')
+                    .wrapInner('<div style="display: block;" />')
+                    .parent()
+                    .find('td > div')
+                    .slideUp("fast");
+                $(this).addClass("collapsed");
+            }
+        });
+
+
+
+

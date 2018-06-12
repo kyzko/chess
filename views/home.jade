@@ -2,146 +2,137 @@ extends layout
 
 block content
     html
-        body
-        .navbar.navbar-inverse.navbar-fixed-top.navbar.repeat
-            .container
-                .navbar-header
-                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
-                    a.navbar-brand(href='main') Организация шахматных турниров
-                .navbar-collapse.collapse
-                    ul.nav.navbar-nav.navbar-right
-                        // <li class="active"><a href="#">Домой</a> </li>
-                        li
-                            a(href='register') Регистрация
-                        li
-                            a(href='index') Вход
+
 
         br
         br
 
         div.container
-        div.row
-            .col-xs-12.col-sm-4
+            table
                 #user
-                    h1.login-title Мы рады Вашему возвращению, #{user.firstName}.
-                        h3 Информация о ползователе
+                    h1.login-title
                         a(href='#')
-                            img(alt='изображение пользователя')
+                            img(src='images/фото.png')
                         ul.user-details
                             li Имя пользователя: #{user.username}
                             li Email: #{user.email}
                             li Имя: #{user.firstName}
                             li Фамилия: #{user.lastName}
+                            li Телефон: #{user.phone}
+                            li Дата рождения: #{user.dataOfBirth}
+                            li Рейтинг: #{user.rating}
+                                div.col-sm-6.col-md-4.col-md-offset-4
+                                  form.form-signin(class='form-signin', action='/registerTour', method='GET')
+                                    button(class='btn btn-lg btn-primary btn-block', type='submit') Зарегистрировать турнир
+                                div.col-sm-6.col-md-4.col-md-offset-4
+                                    form.form-signin(class='form-signin', action='/allTournaments', method='GET')
+                                        button(class='btn btn-lg btn-primary btn-block', type='submit') Все турниры
 
 
-    .div
-     .col-xs-12.col-sm-12
-        h4 Список активных турниров
-        table
-            tr
-                th Наименование книги
-                th Автор
-                th Статус
-            tr
-                td Peter
-                td Griffin
-                td $100
+        .container
+            .centered
+            h4 Список турниров, в которых Вы зарегистрировались
+            table
+                tr
+                    th Наименование турнира
+                    th Автор
+                    th Статус
+                    th Место проведения
+                tr
+                    td Первенство ЦФО 2018
+                    td Бирюков И. Н.
+                    td Регистрация
+                    td г. Тула
 
-            tr
-                td Lois
-                td Griffin
-                td $150
-            tr
-                td Joe
-                td Swanson
-                td $300
-            tr
-                td Cleveland
-                td Brown
-                td $250
-            tr
-                td Lois
-                td Griffin
-                td $150
-            tr
-                td Joe
-                td Swanson
-                td $300
-            tr
-                td Cleveland
-                td Brown
-                td $250
-            tr
-                td Lois
-                td Griffin
-                td $150
-            tr
-                td Joe
-                td Swanson
-                td $300
-            tr
-                td Cleveland
-                td Brown
-                td $250
-     .col-xs-12.col-sm-12
-        h4 Список зарегестрировавшихся турниров
+                tr
+                    td Высшая лига
+                    td РШФ
+                    td Регистрация
+                    td пос. Лоо
+                tr
+                    td Мемориал Алехина
+                    td Раецкий А. В.
+                    td Начат
+                    td г. Воронеж
+                tr
+                    td Кубок ректора БелГУ
+                    td Иванов А. А.
+                    td Завершен
+                    td г. Белгород
 
-        table
-            tr
-                th Наименование книги
-                th Автор
-                th Статус
-            tr
-                td Peter
-                td Griffin
-                td $100
-                td
+        .container
+            .centered
+            h4 Список зарегистрированных Вами турниров
+            table
+                tr
+                    th Наименование турнира
+                    th Количество участников
+                    th Статус
+                tr
 
-            tr
-                td Lois
-                td Griffin
-                td $150
-            tr
-                td Joe
-                td Swanson
-                td $300
-            tr
-                td Cleveland
-                td Brown
-                td $250
-    .col-xs-12.col-sm-12
-        h4 Список активных турниров
+                    each data, i in tournament
+                       - let j = (i+3)*2
 
-        table
-            tr
-                th Наименование книги
-                th Автор
-                th Статус
-            tr
-                td Peter
-                td Griffin
-                td $100
-                td
+                                    td #{data.title}
+                                    //td #{data.participants.length}
+                                    td #{j}
+                                    - if (data.status == 'start') status = 'Начат'
+                                    - if (data.status == 'finished') status = 'Завершен'
+                                    - if (data.status == 'registration') status = 'Регистрация'
+                                    td #{status}
+                        td
+                           div.row
+                                div.col-sm-6.col-md-4.col-md-offset-4
+                                  form(name='form' action='/filigResult' method='GET')
+                                       button
+                                         i.fa.fa-pencil
+                                         | Внесение результатов
+                                    //button( type='submit') Внести результаты
 
-            tr
-                td Lois
-                td Griffin
-                td $150
-            tr
-                td Joe
-                td Swanson
-                td $300
-            tr
-                td Cleveland
-                td Brown
-                td $250
+
+
+                //tr
+                //    td Lois
+                //    td Griffin
+                //    td $150
+                //tr
+                //    td Joe
+                //    td Swanson
+                //    td $300
+                //tr
+                //    td Cleveland
+                //    td Brown
+                //    td $250
+    //.col-xs-12.col-sm-12
+    //    h4 Список активных турниров
+    //
+    //    table
+    //        tr
+    //            th Наименование книги
+    //            th Автор
+    //            th Статус
+    //        tr
+    //            td Peter
+    //            td Griffin
+    //            td $100
+    //            td
+    //
+    //        tr
+    //            td Lois
+    //            td Griffin
+    //            td $150
+    //        tr
+    //            td Joe
+    //            td Swanson
+    //            td $300
+    //        tr
+    //            td Cleveland
+    //            td Brown
+    //            td $250
 
     #footer
         .container
             .row.centered
-                p любая контактная ифнормация
+                p ул. Некрасова, 5Б, Белгород, Белгородская обл., 308007
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(src='../js/bootstrap.min.js')

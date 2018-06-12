@@ -1,0 +1,103 @@
+extends layout
+
+block content
+    html
+    .container.wb
+        .centered
+        h4 Информация о турнирах
+        form(name ='form' id='form')
+        each data, i in tournaments
+            table#itdev_gangs
+                tr.gang-name
+                    td(colspan='2') #{data.title}
+                tr.members.blips
+                    td дата начала турнира
+                    td #{data.start}
+                tr.members.blips
+                    td дата завершения турнира
+                    td #{data.end}
+                tr.members.blips
+                    td количество туров
+                    td #{data.numberOfTours}
+                tr.members.blips
+                    td количество участников
+                    td #{data.participants.length}
+                tr.members.blips
+                    td система проведения
+                    - if (data.system == 'swiss') system = 'Швейцарская'
+                    - if (data.system == 'circular') system = 'Круговая'
+                    - if (data.system == 'olympic') system = 'Олимпийская'
+                    td #{system}
+                tr
+                    td
+                    button
+                            i.icon-ok Зарегистрироваться
+                //script.
+                //    $("form").submit(function (e) {
+                //        e.preventDefault();
+                //        alert(tournaments[i]);
+                //        $.ajax({
+                //            type: "POST",
+                //            url: "api/tournament/paricipants",
+                //            data: JSON.stringify({
+                //                title: title,
+                //                author: author,
+                //                yearPublishing: year
+                //            }),
+                //            dataType: "json",
+                //            contentType: "application/json",
+                //            success: function (data) {
+                //                alert(data);
+                //                $('#resultUUID').empty();
+                //                $('#resultUUID').append(`${data}`)
+                //            }
+                //        })
+                //    })
+        //.container.wb
+        //    .centered
+        //        table#itdev_gangs
+        //            tr.gang-name
+        //                td(colspan='2') НИУ БелГУ
+        //            tr.members.blips
+        //                td Иванов И. И.
+        //                td 1
+        //            tr.members.blips
+        //                td Петров П. П.
+        //                td 2
+        //            tr.members.blips
+        //                td Петров П. П.
+        //                td 2
+
+    script.
+        $('.gang-name').click(function () {
+            if ($(this).hasClass("collapsed")) {
+                $(this).nextUntil('tr.gang-name')
+                    .find('td')
+                    .parent()
+                    .find('td > div')
+                    .slideDown("fast", function () {
+                        var $set = $(this);
+                        $set.replaceWith($set.contents());
+                    });
+                $(this).removeClass("collapsed");
+            } else {
+                $(this).nextUntil('tr.gang-name')
+                    .find('td')
+                    .wrapInner('<div style="display: block;" />')
+                    .parent()
+                    .find('td > div')
+                    .slideUp("fast");
+                $(this).addClass("collapsed");
+            }
+        });
+
+    #footer
+        .container
+            .row.centered
+                p ул. Некрасова, 5Б, Белгород, Белгородская обл., 308007
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(src='../js/bootstrap.min.js')
+
+
+
+

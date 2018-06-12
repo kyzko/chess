@@ -1,7 +1,8 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+let tournamentController = require('../controllers/tournamentController');
 
-var isAuthenticated = function (req, res, next) {
+let isAuthenticated = function (req, res, next) {
     // if user is authenticated in the session, call the next() to call the next request handler
     // Passport adds this method to request object. A middleware is allowed to add properties to
     // request and response objects
@@ -9,9 +10,19 @@ var isAuthenticated = function (req, res, next) {
         return next();
     // if the user is not authenticated then redirect him to the login page
     res.redirect('/');
-}
+};
 
 module.exports = function(passport){
+
+    function authChecker(req, res, next) {
+        if (req.user || req.path==='/' || req.path === '/signup' || req.path === '/login') {
+            next();
+        } else {
+            res.redirect('/');
+        }
+    }
+
+    router.use(authChecker);
 
     /* GET login page. */
     router.get('/', function(req, res) {
@@ -40,7 +51,7 @@ module.exports = function(passport){
 
     /* GET Home Page */
     router.get('/home', isAuthenticated, function(req, res){
-        res.render('home', { user: req.user });
+        tournamentController.infouser(req, res);
     });
 
     /* Handle Logout */
@@ -49,20 +60,33 @@ module.exports = function(passport){
         res.redirect('/');
     });
     router.get('/main', function (req, res) {
-        res.render('main');
+        res.render('main', {user: req.user});
     });
     router.get('/index', function (req, res) {
         res.render('index');
     });
     router.get('/past', function (req, res) {
-        res.render('past');
+        res.render('past', {user: req.user});
     });
     router.get('/filigResult', function (req, res) {
-        res.render('filigResult');
+        res.render('filigResult', {user: req.user});
     });
     router.get('/registerTour', function (req, res) {
         res.render('registerTour');
     });
+
+    router.post('/registerTour', function (req, res) {
+        tournamentController.register(req, res);
+    });
+
+    router.get('/allTournaments', function (req, res) {
+        tournamentController.all(req, res);
+    });
+
+    router.get('/api/tournament/participants', function (req, res) {
+        console.log(`i = ${req.body.data}`);
+    });
+
     router.get('/register', function (req, res) {
         res.render('register');
     });

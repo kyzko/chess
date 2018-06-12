@@ -2,51 +2,165 @@ extends layout
 
 block content
     html
-        body
-        .navbar.navbar-inverse.navbar-fixed-top.navbar.repeat
-            .container
-                .navbar-header
-                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
-                    a.navbar-brand(href='#') Организация шахматных турниров
-                .navbar-collapse.collapse
-                    ul.nav.navbar-nav.navbar-right
-                        // <li class="active"><a href="#">Домой</a> </li>
-                        li
-                            a(href='/views/register.jade') Регистрация
-                        li
-                            a(href='/views/index.jade') Вход
+
     .container.wb
         .centered
-        h4 Информация о прошдших турнирах
+        h4 Таблица результатов
         table#itdev_gangs
             tr.gang-name
-                td(colspan='2') БГТУ им. В. Г. Шухова
+                td(colspan='5') Кубок ректора БелГУ
             tr.members.blips
-                td Иванов И. И.
+                td Место
+                td ФИО
+                td Рейтинг
+                td Количество очков
+                td Коэффициент
+            tr.members.blips
                 td 1
+                td Величко Арсений
+                td 2148
+                td 8.5
+                td 46.5
             tr.members.blips
-                td Петров П. П.
                 td 2
+                td Климов Иван
+                td 2118
+                td 6.5
+                td 46.0
             tr.members.blips
-                td Петров П. П.
-                td 2
-    .container.wb
-        .centered
-            table#itdev_gangs
-                tr.gang-name
-                    td(colspan='2') НИУ БелГУ
-                tr.members.blips
-                    td Иванов И. И.
-                    td 1
-                tr.members.blips
-                    td Петров П. П.
-                    td 2
-                tr.members.blips
-                    td Петров П. П.
-                    td 2
+                td 3
+                td Грачев Андрей
+                td 2217
+                td 6.0
+                td 52.5
+            tr.members.blips
+                td 4
+                td Васильев Алексей
+                td 2014
+                td 6.0
+                td 51.5
+            tr.members.blips
+                td 5
+                td Величко Артемий
+                td 1968
+                td 6.0
+                td 46.5
+            tr.members.blips
+                td 6
+                td Фролова Дарья
+                td 1754
+                td 6.0
+                td 42.5
+            tr.members.blips
+                td 7
+                td Бабаскин Никита
+                td 1473
+                td 5.0
+                td 45.0
+            tr.members.blips
+                td 8
+                td Шуклова Анастасия
+                td 1560
+                td 5.0
+                td 44.5
+            tr.members.blips
+                td 9
+                td Стрежнева Екатерина
+                td 1683
+                td 5.0
+                td 42.5
+            tr.members.blips
+                td 10
+                td Безухов Александр
+                td 1764
+                td 5.0
+                td 42.0
+            tr.members.blips
+                td 11
+                td Кривоухов Александр
+                td 1681
+                td 5.0
+                td 39.5
+            tr.members.blips
+                td 12
+                td Андреева Дарья
+                td 1372
+                td 4.5
+                td 31.5
+            tr.members.blips
+                td 13
+                td Искалина Диана
+                td 1316
+                td 4,5
+                td 29,5
+            tr.members.blips
+                td 14
+                td Базаров Владимир
+                td 1846
+                td 4,0
+                td 38,5
+            tr.members.blips
+                td 15
+                td Пенкин Владислав
+                td 1451
+                td 3,5
+                td 39,0
+            tr.members.blips
+                td 16
+                td Шалопутова Анастасия
+                td 1596
+                td 3,5
+                td 35,5
+            tr.members.blips
+                td 17
+                td Замбрано Интриаго Бриан
+                td 0
+                td 3,0
+                td 41,0
+            tr.members.blips
+                td 18
+                td Шелдученко Виктор
+                td 0
+                td 3,0
+                td 39,0
+            tr.members.blips
+                td 19
+                td Берналь Касарев Хуан Давид
+                td 1468
+                td 3,0
+                td 34,0
+            tr.members.blips
+                td 20
+                td Ярцев Александр
+                td 0
+                td 3,0
+                td 34,0
+            tr.members.blips
+                td 21
+                td Малыхина Анастасия
+                td 0
+                td 1,0
+                td 36,0
+            tr.members.blips
+                td 22
+                td Вишняков Максим
+                td 0
+                td 1,0
+                td 36,0
+    //.container.wb
+    //    .centered
+    //        table#itdev_gangs
+    //            tr.gang-name
+    //                td(colspan='2') НИУ БелГУ
+    //            tr.members.blips
+    //                td Иванов И. И.
+    //                td 1
+    //            tr.members.blips
+    //                td Петров П. П.
+    //                td 2
+    //            tr.members.blips
+    //                td Петров П. П.
+    //                td 2
 
     script.
         $('.gang-name').click(function () {
@@ -73,4 +187,9 @@ block content
 
 
 
-
+    #footer
+        .container
+            .row.centered
+                p ул. Некрасова, 5Б, Белгород, Белгородская обл., 308007
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+    script(src='../js/bootstrap.min.js')

@@ -2,13 +2,16 @@
 
 body {
     /*background-color: #fdfef9;*/
-    /*background-image: url("http://ru.sport-wiki.org/wp-content/themes/sportwiki/img/shahmaty.jpg") no-repeat;*/
-    font-family: "Lato";
+    /*background-image: url('/public/images/фон.jpg');*/
+    width: 1023px;
+    height: 669px;
+    /*font-family: "Lato";*/
     font-weight: 300;
     font-size:16px;
     color: #555;
-    overflow: auto;
-    /*background-image: url("http://ru.sport-wiki.org/wp-content/themes/sportwiki/img/shahmaty.jpg");*/
+    overflow: -webkit-paged-y;
+    /*background-image: url("http://www.rabstol.net/uploads/gallery/main/386/rabstol_net_chess_13.jpg") no-repeat ;*/
+    background-size: cover;
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
@@ -16,16 +19,17 @@ body {
     margin-top: 70px;
 }
 
+
 h1, h1, h3, h4, h5, h6 {
     font-family: "Raleway";
     font-weight: 300;
-    color: #a2b1c8;
+    color: #69768a;
 }
 
 p{
     line-height: 28px;
     margin-bottom: 25px;
-    color: #464847;
+    color: aliceblue;
 }
 .centered {
     text-align: center;
@@ -58,10 +62,10 @@ hr {
 }
 
 .navbar.repeat {
-    font-weight: 800;
+    font-weight: unset;
     font-size: 14px;
-    padding-top: 15px;
-    padding-bottom: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     background-size: contain;
     /*background-image: url("https://pp.userapi.com/c624827/v624827697/d8dc/AkyTx3Euncc.jpg") ;*/
 }
@@ -191,7 +195,7 @@ hr {
 #footer {
     background: #060201;
     position: fixed;
-    padding: 10px;
+    padding: 0px;
     width: 100%;
     left: 0; bottom: 0;
 }
@@ -220,8 +224,8 @@ hr {
 }
 .btn-block {
     display: block;
-    /*width: -webkit-inline-box;*/
-    position: absolute;
+    width: auto;
+    position: relative;
 }
 input:-webkit-autofill {
     background-color: #ebe4e2 !important;
@@ -303,28 +307,29 @@ input:-webkit-autofill {
     height: 158px;
 }
 .thrumb-wrapp {
-    display: inline-block;
+    display: inline-flex;
     margin-top: 20px;
 }
 .thrumb {
-    background: url(http://subtlepatterns.com/patterns/squared_metal.png);
-    float: left;
+    background: url(https://thumbs.dreamstime.com/t/vencedor-e-vencido-rei-ca%C3%ADdo-da-xadrez-perto-de-um-outro-80203344.jpg) no-repeat;
+    background-size: cover;
+    float: none;
     position: relative;
-    width: 300px;
-    height: 200px;
+    width: 457px;
+    height: 250px;
     overflow: hidden;
-    border: 1px solid #5e556a;
+    border: 1px solid ;
 }
 .thrumb .wrapper {
-    height: 200px;
+    height: 350px;
     left: 0;
     position: absolute;
     top: 0;
     width: 300px;
 }
 .thrumb .wrapper img {
-    height: 200px;
-    width: 300px;
+    height: 255px;
+    width: 500px;
     position: relative;
     z-index: 2;
 }
@@ -341,7 +346,7 @@ input:-webkit-autofill {
 }
 .wrapp a {
     font-family: Trebuchet MS, Arial;
-    position: in;
+    /*position: in;*/
     z-index: 1;
     color: #5e556a;
     bottom: 0;
@@ -363,7 +368,7 @@ input:-webkit-autofill {
     position: relative;
     margin:1px;
     font-weight:bold;
-    background: #eef4d3 url(left.png) center right no-repeat;
+    /*background: #eef4d3 url(left.png) center right no-repeat;*/
 }
 .menu_body {
     display:none;
@@ -441,7 +446,7 @@ input:-webkit-autofill {
     color:rgb(213, 194, 0);
 }
 td {
-    padding-right:10px;
+    padding-right:23px;
     padding-left:10px;
 }
 td, th {
@@ -453,7 +458,7 @@ table {
     text-align: center;
     border-collapse: collapse;
     border-spacing: 5px;
-    background: #ebe4e2;
+    /*background: #ebe4e2;*/
     border-radius: 20px;
 }
 th {
@@ -461,14 +466,14 @@ th {
     font-weight: 300;
     padding: 12px 10px;
     border-bottom: 2px solid #989590;
-    color: #989590;
+    color:#000000fa;
 }
 tbody tr:nth-child(2) {
     border-bottom: 2px solid #989590;
 }
 td {
-    padding: -1 px;
-    color: #8D8173;
+    /*padding: 1 px;*/
+    color: #000000a6;
 }
 
     .col-sm-12 {
@@ -479,6 +484,62 @@ td {
     min-height: unset;
     padding-right: 15px;
     padding-left: 134px;
+}
 html {
+    display: table;
+}
+ul, menu, dir {
+    display: inline-block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+table {
+    /*background: url("https://html5book.ru/images/blurry.jpg") no-repeat;*/
+    background-position: center;
+    size: 1px;
+}
+img {
+    width: 189px;
+    height: 255px;
+}
+form {
     display: block;
+    margin-top: 0em;
+}
+li {
+    display: grid;
+    text-align: -webkit-match-parent;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 11px;
+    margin-bottom: 2px;
+}
+h4, .h4 {
+    font-size: 20px;
+}
+h6, .h6 {
+    font-size: 19px;
+}
+h2.wb {
+    color: whitesmoke;
+}
+a.wb {
+    color: black;
+    width: 900px;
 }
